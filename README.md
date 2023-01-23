@@ -1,4 +1,4 @@
-# vue_test
+# vue_test (not cli)
 
 # test first CDN => development version
 
