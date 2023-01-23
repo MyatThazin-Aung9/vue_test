@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Binding</title>
+    <style>
+        .blue{
+            color: blue;
+        }
+        .txt{
+            text-decoration: line-through;
+        }
+        img{
+            width: 100%;
+            max-width: 300px;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="att">
+        <input type="text" v-model="message">
+        <h1 :class="[txtBlue,deleteMessage]">{{ message }}</h1>
+        <a :href="myUrl" target="_blank">Youtube</a><br>
+        <img :src="mySrc" alt="Howl's Moving Castle"><br>
+        <span :title="myTitle">SV</span><br>
+        <input type="text" :disabled="status">
+    </div>
+</body>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- 
+        class, link, disabled, url, 
+
+     -->
+    <script>
+        let app = new Vue({
+            el: '#att' ,
+            data:{
+                message: 'this is testing from vue' ,
+                txtBlue: 'blue',
+                deleteMessage: 'txt' ,
+                myUrl:'https://www.youtube.com' ,
+                mySrc: 'img/calcifer-wallpaper.png' ,
+                myTitle: 'Start Vue' ,
+                status: true
+            }
+        })
+    </script>
+</html>
