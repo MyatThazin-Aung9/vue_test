@@ -13,7 +13,7 @@ new Vue({ <br>
           message: 'Start vue'<br>
         }<br>
   methods: {<br>
-              //option function
+              //option function<br>
            }  
 })<br>
 
