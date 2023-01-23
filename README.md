@@ -14,7 +14,7 @@ new Vue({ <br>
         }<br>
   methods: {<br>
               //option function
-           }<br>  
+           }  
 })<br>
 
 # parameters flow of vuejs
