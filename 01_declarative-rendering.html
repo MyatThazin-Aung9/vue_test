@@ -7,17 +7,19 @@
     <title>Vue Start</title>
 </head>
 <body>
-    <div id="app">
-        {{ message }}
+    <div id="test">
+        <h1>{{ title }}</h1>
+        <h4>{{ body }}</h4>
       </div>
 </body>
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script>
         var app = new Vue({
-        el: '#app',
+        el: '#test',
         data: {
-          message: 'Hello Vue!'
+          title: 'Start vue!',
+          body: "This is body"
         }
       })
     </script>
