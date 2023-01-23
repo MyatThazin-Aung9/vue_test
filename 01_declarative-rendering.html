@@ -10,7 +10,13 @@
     <div id="test">
         <h1>{{ title }}</h1>
         <h4>{{ body }}</h4>
-      </div>
+    </div>
+
+    <div class="app">
+        <!-- template syntax -->
+        <h1>{{ message.split("").join('-') }}</h1> 
+        <!-- expression => can /statement => cann't -->
+    </div>
 </body>
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -20,6 +26,13 @@
         data: {
           title: 'Start vue!',
           body: "This is testing declarative render data to the DOM."
+        }
+      })
+
+      let app1 = new Vue({
+        el: '.app' ,
+        data: {
+            message: 'hello this is testing'
         }
       })
     </script>
