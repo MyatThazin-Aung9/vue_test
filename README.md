@@ -6,13 +6,13 @@ See [Configuration Reference](https://v2.vuejs.org/v2/guide/).
 
 # vue syntax
 
-new Vue({
-  // options
-  el: '#test',
-  data: {
-          message: 'Start vue'
-        }
-})
+new Vue({ <br>
+  // options <br>
+  el: '#test',<br>
+  data: {<br>
+          message: 'Start vue'<br>
+        }<br>
+})<br>
 
 # parameters flow of vuejs
 
