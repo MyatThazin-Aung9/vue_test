@@ -11,6 +11,8 @@
         <!-- <button onclick="clickMe()">Click Me</button> -->
         <button @click="clickMe()">Click Me</button>
         <h1>{{ number }}</h1>
+        <button @click="dec()">Decrease</button>
+        <button @click="inc()">Increase</button>
     </div>
 </body>
     <!-- development version, includes helpful console warnings -->
@@ -24,6 +26,12 @@
             methods: {
                 clickMe:function(){
                     alert('You click me!')
+                },
+                dec(){
+                    this.number--;
+                },
+                inc(){
+                    this.number++;
                 }
             }
         })
