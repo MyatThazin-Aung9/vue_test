@@ -10,6 +10,7 @@
     <div id="eve">
         <!-- <button onclick="clickMe()">Click Me</button> -->
         <button @click="clickMe()">Click Me</button>
+        <h1>{{ number }}</h1>
     </div>
 </body>
     <!-- development version, includes helpful console warnings -->
@@ -18,7 +19,7 @@
         let app3 = new Vue({
             el: '#eve',
             data: {
-
+                number : 0
             },
             methods: {
                 clickMe:function(){
