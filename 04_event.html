@@ -21,8 +21,8 @@
         <p v-if="number < 0">This is minus number</p>
         <p v-else-if="number == 0">This is equal zero</p>
         <p v-else="number > 0">This is plus number</p>
-        <input type="text" v-model="myText">{{ myText }}
-        <button>Send</button><br>
+        <input type="text" v-model="myText" @keyup.enter="send()">
+        <button @click="send()">Send</button><br>
     </div><br>
     <div id="eventmethod">
         <button @click="greet()">Greet</button>
@@ -46,6 +46,10 @@
                 },
                 inc(){
                     this.number++;
+                },
+                send(){
+                    console.log(this.myText);
+                    this.myText = ''
                 }
             }
         });
