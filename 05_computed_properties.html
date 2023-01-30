@@ -14,6 +14,8 @@
 <body>
     <div id="com">
         <h1>{{ getLenght }}</h1>
+        {{ message }}
+        <h1>{{ reverse }}</h1>
         <button @click="show">Click</button>
     </div>
 </body>
@@ -28,12 +30,19 @@
             computed: {
                 getLenght() {
                     return this.message.length; //must return & no need to write ()
+                },
+                reverse() {
+                    // return this.message.split("").reverse().join("")
+                    let newMessage = this.message.split("");
+                    let reverseMessage = newMessage.reverse();
+                    let response = reverseMessage.join("");
+                    return response;
                 }
             }, 
 
             methods: {
                 show(){
-                    alert(this.message.length)
+                    alert("hello")
                 }
             }
         })
