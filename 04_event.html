@@ -22,6 +22,9 @@
         <p v-else-if="number == 0">This is equal zero</p>
         <p v-else="number > 0">This is plus number</p>
     </div>
+    <div id="eventmethod">
+        <button @click="greet()">Greet</button>
+    </div>
 </body>
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -40,6 +43,18 @@
                 },
                 inc(){
                     this.number++;
+                }
+            }
+        });
+        
+        let app4 = new Vue({
+            el: '#eventmethod',
+            data: {
+                name : 'Vue.js'
+            },
+            methods: {
+                greet(){
+                    alert('Hello ' + this.name + '!')
                 }
             }
         })
