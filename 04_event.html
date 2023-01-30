@@ -21,7 +21,9 @@
         <p v-if="number < 0">This is minus number</p>
         <p v-else-if="number == 0">This is equal zero</p>
         <p v-else="number > 0">This is plus number</p>
-    </div>
+        <input type="text" v-model="myText">{{ myText }}
+        <button>Send</button><br>
+    </div><br>
     <div id="eventmethod">
         <button @click="greet()">Greet</button>
     </div>
@@ -32,7 +34,8 @@
         let app3 = new Vue({
             el: '#eve',
             data: {
-                number : 0
+                number : 0,
+                myText : "ss"
             },
             methods: {
                 clickMe:function(){
