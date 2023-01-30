@@ -26,3 +26,5 @@ The **Vue function** takes an object as an argument, which contains various opti
 **data:** This option contains the data that will be used by the Vue instance. It should be an object with properties that correspond to the data that you want to use in the app.
 
 **methods:** This option contains the methods that will be available to the Vue instance. It should be an object with properties that correspond to the methods that you want to use in the app.  They can be defined as functions in the methods property of the options object. 
+
+**computed:**
