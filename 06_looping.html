@@ -10,13 +10,49 @@
    
 </style>
 <body>
-    <div id="com">
-        
+    <div id="looping">
+        <input type="text" v-model="message">
+        <h1>Looping</h1>
+
+        <ul>
+            <li v-for="(item,index) in numbers">{{ index }} | {{ item }}</li>
+        </ul>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </table>
     </div>
 </body>
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script>
-        
+        let app6 = new Vue({
+            el: '#looping',
+            data: {
+                message: '',
+                numbers: ['one','two','three'] ,
+                items: [
+                    {
+                        id: '1',
+                        name: 'Aung',
+                        gender: 'Male'
+                    },
+                    {
+                        id: '2',
+                        name: 'B',
+                        gender: 'Male'
+                    },
+                    {
+                        id: '1',
+                        name: 'C',
+                        gender: 'Female'
+                    }
+                ]
+            },
+        })
     </script>
 </html>
