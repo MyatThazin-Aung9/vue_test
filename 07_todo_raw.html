@@ -16,15 +16,21 @@
    tr,th,td{
     padding: 20px;
    }
+   .todo{
+    text-align: center;
+   }
+   table{
+    margin: 0 auto;
+   }
 </style>
 <body>
-    <div id="todo">
+    <div id="todo" class="todo">
         <h1>Todo list</h1>
         <input type="text" placeholder="Enter Pizza Name" v-model="pizzaData.name"><br>
         <input type="text" placeholder="Enter Pizza Price" v-model="pizzaData.price"><br>
-        <button>Add</button>
+        <button @click="create()">Add</button>
         <hr>
-        <table>
+        <table border="1">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -49,17 +55,27 @@
             el: '#todo',
             data: {
                 pizzaData :{
+                            id : '',
                             name : '',
                             price : ''
                         },
                 item : [
-                    {
-                        id : '1',
-                        name : 'Chicken Pizza',
-                        price : '1000'
-                    }
                 ]
             },
+            methods : {
+                create(){
+                    console.log(this.item.length + 1)
+                    this.item.push({
+                        id : this.item.length + 1,
+                        name : this.pizzaData.name,
+                        price : this.pizzaData.price
+                    })
+                    this.pizzaData.id = '';
+                    this.pizzaData.name = '';
+                    this.pizzaData.price = ''
+    
+                }
+            }
         })
     </script>
 </html>
