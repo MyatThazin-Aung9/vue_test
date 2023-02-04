@@ -18,16 +18,16 @@
             <li v-for="(item,index) in numbers">{{ index }} | {{ item }}</li>
         </ul>
 
-        <table>
+        <table border="1">
             <tr>
                 <th>ID</th>
                 <th>Name</th>
                 <th>Gender</th>
             </tr>
-            <tr v-for="item in items">
-                <td></td>
-                <td></td>
-                <td></td>
+            <tr v-for="list in items">
+                <td>{{ list.id }}</td>
+                <td>{{ list.name }}</td>
+                <td>{{ list.gender }}</td>
             </tr>
         </table>
     </div>
