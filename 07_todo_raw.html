@@ -13,6 +13,9 @@
    input, button{
     margin: 10px 0;
    }
+   tr,th,td{
+    padding: 20px;
+   }
 </style>
 <body>
     <div id="todo">
@@ -20,6 +23,23 @@
         <input type="text" placeholder="Enter Pizza Name" v-model="pizzaData.name"><br>
         <input type="text" placeholder="Enter Pizza Price" v-model="pizzaData.price"><br>
         <button>Add</button>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="list in item">
+                    <td>{{ list.id }}</td>
+                    <td>{{ list.name }}</td>
+                    <td>{{ list.price }}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
     <!-- development version, includes helpful console warnings -->
@@ -35,7 +55,8 @@
                 item : [
                     {
                         id : '1',
-
+                        name : 'Chicken Pizza',
+                        price : '1000'
                     }
                 ]
             },
