@@ -73,17 +73,7 @@
             },
             methods : {
                 create(){
-
-                    if(this.pizzaData.name == ''){
-                        this.validation.nameStatus = true
-                    }else{
-                        this.validation.nameStatus = false
-                    }
-                    if(this.pizzaData.price == ''){
-                        this.validation.priceStatus = true
-                    }else{
-                        this.validation.priceStatus = false
-                    }
+                    this.validationCheck();
                     // console.log(this.item.length + 1)
                     if(!this.validation.nameStatus && !this.validation.priceStatus){
                         this.item.push({
@@ -93,6 +83,21 @@
                         })
                         this.clear();
                     }
+                },
+                validationCheck(){
+                    // if(this.pizzaData.name == ''){
+                    //     this.validation.nameStatus = true
+                    // }else{
+                    //     this.validation.nameStatus = false
+                    // }
+                    this.validation.nameStatus = this.pizzaData.name == '' ? true : false;
+
+                    // if(this.pizzaData.price == ''){
+                    //     this.validation.priceStatus = true
+                    // }else{
+                    //     this.validation.priceStatus = false
+                    // }
+                    this.validation.priceStatus = this.pizzaData.price == '' ? true : false;
                 },
                 clear(){
                     this.pizzaData.id = '';
