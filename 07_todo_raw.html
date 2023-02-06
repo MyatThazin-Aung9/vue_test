@@ -10,8 +10,11 @@
    h1{
     text-align: center;
    }
-   input, button{
-    margin: 10px 0;
+   input{
+    margin: 5px 10px;
+   }
+   button{
+    margin: 10px;
    }
    tr,th,td{
     padding: 20px;
@@ -26,8 +29,10 @@
 <body>
     <div id="todo" class="todo">
         <h1>Todo list</h1>
-        <input type="text" placeholder="Enter Pizza Name" v-model="pizzaData.name"><br>
-        <input type="text" placeholder="Enter Pizza Price" v-model="pizzaData.price"><br>
+        <input type="text" placeholder="Enter Pizza Name" v-model="pizzaData.name">
+        <small style="color: red;" v-if="validation.nameStatus">Pizza Name is required!</small><br>
+        <input type="text" placeholder="Enter Pizza Price" v-model="pizzaData.price">
+        <small style="color: red;" v-if="validation.priceStatus">Pizza Amount is required!</small><br>
         <button @click="create()">Add</button>
         <hr>
         <table border="1">
@@ -60,20 +65,37 @@
                             price : ''
                         },
                 item : [
-                ]
+                ],
+                validation : {
+                    nameStatus : false ,
+                    priceStatus : false
+                }
             },
             methods : {
                 create(){
-                    console.log(this.item.length + 1)
+
+                    if(this.pizzaData.name == ''){
+                        this.validation.nameStatus = true
+                    }else{
+                        this.validation.nameStatus = false
+                    }
+                    if(this.pizzaData.price == ''){
+                        this.validation.priceStatus = true
+                    }else{
+                        this.validation.priceStatus = false
+                    }
+                    // console.log(this.item.length + 1)
                     this.item.push({
                         id : this.item.length + 1,
                         name : this.pizzaData.name,
                         price : this.pizzaData.price
                     })
+                    this.clear();
+                },
+                clear(){
                     this.pizzaData.id = '';
                     this.pizzaData.name = '';
                     this.pizzaData.price = ''
-    
                 }
             }
         })
