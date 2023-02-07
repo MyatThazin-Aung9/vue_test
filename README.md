@@ -29,4 +29,4 @@ The **Vue function** takes an object as an argument, which contains various opti
 
 **computed:** This option is similar the function of methods property except need to return and when data binding, no need to add ().
 
-**[Reference]** (https://www.udemy.com/course/vuejs-fast-crash-course/?ranMID=39197&ranEAID=JVFxdTr9V80&ranSiteID=JVFxdTr9V80-Ht4AnJCYgERPLP3ltaqxBA&LSNPUBID=JVFxdTr9V80&utm_source=aff-campaign&utm_medium=udemyads).
+**See** [Reference](https://www.udemy.com/course/vuejs-fast-crash-course/?ranMID=39197&ranEAID=JVFxdTr9V80&ranSiteID=JVFxdTr9V80-Ht4AnJCYgERPLP3ltaqxBA&LSNPUBID=JVFxdTr9V80&utm_source=aff-campaign&utm_medium=udemyads).
