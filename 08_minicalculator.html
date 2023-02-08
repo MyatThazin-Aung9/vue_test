@@ -24,7 +24,10 @@
 </head>
 <body>
     <div class="container" id="app">
-        <div class="row my-5 justify-content-center">
+        <div class="text-center my-4">
+            <h2>My Calculator</h2>
+        </div>
+        <div class="row mb-5 mt-2 justify-content-center">
             <div class="col-12">
                 <div class="card" style="background-color: rgb(174, 170, 170);">
                     <div class="card-body">
@@ -33,22 +36,37 @@
                         </div>
                         <div class="row">
                             <div class="form-gp col-6 mb-3">
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" placeholder="Enter First Number">
                             </div>
                             <div class="form-gp col-6 mb-3">
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" placeholder="Enter Second Number">
                             </div>
-                            <div class="col-4" class="form-control">
-                                <select class="form-control" id="">
-                                    <option value="">+</option>
-                                    <option value="">-</option>
-                                    <option value="">*</option>
-                                    <option value="">/</option>
-                                </select>
+                            <div class="d-flex justify-content-around">
+                                <div class="" class="form-control">
+                                    <select class="form-control" id="">
+                                        <option value="">Choose option...</option>
+                                        <option value="">+</option>
+                                        <option value="">-</option>
+                                        <option value="">*</option>
+                                        <option value="">/</option>
+                                    </select>
+                                </div>
+                                <div class="">
+                                    <button class="btn btn-primary">Calculate</button>
+                                </div>
+                                <div class="">
+                                    <button class="btn btn-danger">Clear</button>
+                                </div>
+                                <div class="">
+                                    <button class="btn btn-info w-30">Save</button>
+                                </div>
                             </div>
-                            <div class="col-4">
-                                <button class="btn btn-primary">Save</button>
-                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <h5 class="text-white">History</h5>
+                        <div class="text-muted">
+                            Record...
                         </div>
                     </div>
                 </div>
